@@ -19,7 +19,7 @@ public class ConnectionUtils {
     public static Connection getConnection() throws SQLException{
         
         if (connection == null || connection.isClosed()){
-            String dbURL = "jdbc:mysql://localhost:3308/"+"jdbc_test?ServerTimezone=UTC";
+            String dbURL = "jdbc:mysql://localhost:3306/"+"jdbc_test?useTimezone=true&serverTimezone=UTC";
             
             Properties properties = new Properties();
             properties.put("user", "root");
